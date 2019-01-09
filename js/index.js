@@ -9,7 +9,7 @@ $(document).ready(function () {
         js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
-    FB.CustomerChat.show(true);
+    //FB.CustomerChat.show(true);
     console.log("customer chat!!")
 
 });
