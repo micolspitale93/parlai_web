@@ -16,6 +16,24 @@ $(document).ready(function () {
 
 });
 
+$("#qea_menu").on("click", function () {
+    $(".menu-nav").removeClass("active");
+    $("#qea_menu").addClass("active");
+    $(".menu-div").fadeOut();
+    $("#qea").fadeIn();
+    document.getElementById("chitchat").style.display = "none";
+    document.getElementById("qea").style.display = "block";
+});
+
+$("#chitchat_menu").on("click", function () {
+    $(".menu-nav").removeClass("active");
+    $("#chitchat_menu").addClass("active");
+    $(".menu-div").fadeOut();
+    $("#chichat").fadeIn();
+    document.getElementById("qea").style.display = "none";
+    document.getElementById("chitchat").style.display = "block";
+});
+
 function inizializeSDK() {
     window.fbAsyncInit = function () {
         FB.init({
@@ -32,7 +50,7 @@ function inizializeSDK() {
         }
         js = d.createElement(s);
         js.id = id;
-        js.src ="https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 

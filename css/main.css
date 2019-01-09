@@ -164,3 +164,7 @@ img {
     margin: 2%;
     text-align: justify;
 }
+
+#chitchat{
+    display: none;
+}
