@@ -1,6 +1,8 @@
 inizializeSDK();
 $(document).ready(function () {
-
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+    });
     (function (d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
@@ -9,7 +11,7 @@ $(document).ready(function () {
         js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
-    //FB.CustomerChat.show(true);
+    FB.CustomerChat.show(true);
     console.log("customer chat!!")
 
 });
